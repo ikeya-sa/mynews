@@ -42,6 +42,20 @@
                     @csrf
                     <input type="submit" class="btn btn-primary" value="更新">
                 </form>
+                {{-- 以下を追記 --}}
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>編集履歴</h2>
+                        <ul class="list-group">
+                            @if ($profiles_form->profilehistories != NULL)
+                                @foreach ($profiles_form->profilehistories as $profilehistory)
+                                    <li class="list-group-item">{{ $profilehistory->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+                {{-- 以上を追記 --}}
             </div>
         </div>
     </div>
