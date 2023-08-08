@@ -20,6 +20,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <p><font color="red" size="5">New!</font>　{{ $headline->updated_at->format('Y年m月d日') }}</p>
                             <p class="body mx-auto">{{ Str::limit($headline->body, 650) }}</p>
                         </div>
                     </div>
